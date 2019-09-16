@@ -49,8 +49,9 @@ static void RNCReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
   BOOL didSetReachabilityFlags = [self setReachabilityStatus:flags];
 
   if (self->_firstTimeReachability) {
+    NSDictionary *state = [self currentState];
     [self->_firstTimeReachabilityResolvers enumerateObjectsUsingBlock:^(RCTPromiseResolveBlock resolver, BOOL *stop) {
-      resolver([self currentState]);
+      resolver(state);
     }];
 
     [self cleanUpFirstTimeReachability];
