@@ -101,7 +101,7 @@ static void RNCReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
 
 - (SCNetworkReachabilityRef)getReachabilityRef
 {
-  SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, "apple.com");
+  SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, "jolt.com");
   SCNetworkReachabilityContext context = { 0, ( __bridge void *)self, NULL, NULL, NULL };
   SCNetworkReachabilitySetCallback(reachability, RNCReachabilityCallback, &context);
   SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
