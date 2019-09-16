@@ -3,9 +3,12 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
+ *
+ * Modifications by M Heins at Jolt to investigate some issues.
  */
 
 #import "RNCNetInfo.h"
+#import <Foundation/Foundation.h>
 
 #if !TARGET_OS_TV
   #import <CoreTelephony/CTTelephonyNetworkInfo.h>
